@@ -1,0 +1,24 @@
+{
+  "name": "gradhack",
+  "version": "1.0.0",
+  "description": "Oracle Digital Assistant Component Package",
+  "main": "main.js",
+  "scripts": {
+    "bots-node-sdk": "bots-node-sdk",
+    "help": "npm run bots-node-sdk -- --help",
+    "prepack": "npm run bots-node-sdk -- pack --dry-run",
+    "start": "npm run bots-node-sdk -- service .",
+    "docker-build": "docker-compose build --force-rm --no-cache"
+  },
+  "repository": {},
+  "devDependencies": {
+    "@oracle/bots-node-sdk": "^2.5.5",
+    "express": "^4.17.1"
+  },
+  "bundledDependencies": [
+    "request"
+  ],
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
