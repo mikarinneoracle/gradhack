@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+        var chatWidgetSettings = {
+            URI: 'ENTER_ORDS_URL_HERE',
+            channelId: 'ENTER_ODA_CHANNEL_HERE'
+        };
+        function initSdk(name) {
+            // Default name is Bots
+            if (!name) {
+                name = 'Bots';
+            }
+            setTimeout(() => {
+                const Bots = new WebSDK(chatWidgetSettings); // Initiate library with configuration
+                Bots.connect()                               // Connect to server
+                    .then(() => {
+                        console.log("Connection Successful");
+                    })
+                    .catch((reason) => {
+                        console.log("Connection failed");
+                        console.log(reason);
+                    });
+                window[name] = Bots;
+            });
+        }
+    </script>
+    <script src="https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/sehubemeaprod/b/Gradhack/o/web-sdk.js" onload="initSdk('Bots')">
+    </script>
+    </head>
+    <body>
+    <h2>Instructions for the chat demo:</h2>
+    <h3>
+        <ul>
+            <li>Click the chat image to open the chat</li>
+            <li>Start by saying Hi or Hello</li>
+            <li>Search sites by id or choose from the list</li>
+            <li>Id's 1-4 will work (rows in database), other id's return not found/try again</l>
+            <li>Id retry count is 2 if a non numeric id is entered</li>
+            <li>When found (or selected from the list) site details are shown including it's status</li>
+            <li>Depending on site status site can be activaed or deactivated</li>
+            <li>Alternaively can end chat just by choosing finish</li>
+        </ul>
+    </h3>
+    </body>
+</html>
