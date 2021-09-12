@@ -1,0 +1,31 @@
+{
+  "botId": "gradhack",
+  "platformVersion": "1.0",
+  "context": {
+    "variables": {}
+  },
+  "properties": {
+    "url": "ENTER_ORDS_URL_HERE",
+    "token": "ENTER_TOKEN_HERE",
+    "siteid": "{\"number\":2,\"endOffset\":1,\"entityName\":\"NUMBER\",\"originalString\":\"2\",\"type\":\"Integer\",\"beginOffset\":0}",
+    "status": "active"
+  },
+  "message": {
+    "payload": {},
+    "messagePayload": {},
+    "retryCount": 0,
+    "channelConversation": {
+      "botId": "xyz",
+      "sessionId": "1234",
+      "type": "test",
+      "userId": "1234",
+      "channelId": "sample"
+    },
+    "componentResponse": {},
+    "executionContext": "any",
+    "tenantId": "1234",
+    "createdOn": "2018-06-20T20:24:33.151Z",
+    "id": "1234"
+  }
+}
+
